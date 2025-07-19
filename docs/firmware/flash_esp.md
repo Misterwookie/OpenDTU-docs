@@ -91,8 +91,12 @@ tab below that matches your flash tool.
     ```
 
     * Adjust the `--chip` parameter to the actual chip in use, e.g., `esp32-s3`.
-    * Change `COM1` to the correct port on your computer.
+    * Change `COM1` to the correct port on your computer.[^1]
     * In case you get an error at the end of the flash procedure, you can try again using a lower baudrate eg. 460800.
+
+[^1]: Linux only: A quick way to find ot the correct port name is to use the command `ls -l /dev/tty*` and pick the last name in the list, e.g. `/dev/ttyUSB0`.
+    If you encounter the error `Invalid value for '--port' / '-p': Path '/dev/ttyUSB0' is not readable.`, the command `sudo chmod a+rw /dev/ttyUSB0` temporarily grants the required permissions.
+
 
 === "ESP_Flasher :material-microsoft-windows:"
 
