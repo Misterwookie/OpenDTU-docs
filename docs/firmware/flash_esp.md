@@ -84,9 +84,9 @@ tab below that matches your flash tool.
     esptool --port COM1 erase_flash
 
     esptool --baud 921600 --port COM1 --chip esp32 \
-        --before default_reset --after hard_reset \
-        write_flash --flash_mode dout \
-        --flash_freq 40m --flash_size detect \
+        --before default-reset --after hard-reset \
+        write-flash --flash-mode dout \
+        --flash-freq 40m --flash-size detect \
         0x0 opendtu-generic*.factory.bin
     ```
 
